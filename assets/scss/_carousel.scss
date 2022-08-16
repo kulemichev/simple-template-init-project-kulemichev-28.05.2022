@@ -1,9 +1,12 @@
 .carousel {
   position: relative;
+
+  order: 1;
+
   width: 100%;
   padding: 15px;
+
   background-color: #efefef;
-  order: 1;
 }
 
 .carousel-slides {
@@ -13,7 +16,9 @@
 .carousel-slide {
   position: absolute;
   top: 0;
+
   display: flex;
+
   transition: opacity 0.5s;
 
   opacity: 0;
@@ -27,13 +32,15 @@
 .carousel-slide.active {
   position: relative;
   z-index: 1;
+
   opacity: 1;
 }
 
 .carousel-slide__image {
   display: flex;
-  padding: 15px;
   align-items: center;
+
+  padding: 15px;
 }
 
 .carousel-slide__image img {
@@ -42,13 +49,17 @@
 
 .carousel-slide__text h3 {
   text-transform: uppercase;
+
   color: #ffffff;
 }
 
 .carousel-slide__text p {
   overflow: hidden;
+
   max-height: 70px;
+
   color: #ffffff;
+
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -69,26 +80,29 @@
 
 .carousel-control.next {
   right: 3px;
+
   transform: scale(-1, 1);
 }
 
 @media (min-width: 769px) {
   .carousel-slide__text {
-    padding: 15px 30px 15px 15px;
     flex-grow: 1;
+
+    padding: 15px 30px 15px 15px;
   }
   .carousel-slide__text h3 {
-    margin: 15px 0;
-
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
+
+    margin: 15px 0;
   }
   .carousel-slide__text p {
+    flex-grow: 1;
+
     margin-bottom: 15px;
 
     text-align: justify;
-    flex-grow: 1;
   }
 }
 
@@ -102,13 +116,16 @@
   }
   .carousel-slide__text {
     flex: 1 0 100%;
+
     padding: 0 15px 15px 15px;
   }
   .carousel-slide__text h3 {
     overflow: hidden;
     flex: 1 0 100%;
+
     max-width: calc(100vw - 135px);
     margin: 0 0 15px 0;
+
     text-align: center;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -116,6 +133,7 @@
   .carousel-slide__text p {
     margin: 0 0 15px 0;
     margin-bottom: 0;
+
     text-align: center;
   }
 }
